@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontEnd/css/style.css">
+    <title>Admin - Seminfo 3.2</title>
+</head>
+<body data-page="admin">
+    <header>
+        <b>SEMINFO- ADMIN</b>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="participantes.html">Participantes</a>
+            <a href="#" id="sair">Sair</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <form id="form-evento">
+                <h1>Cadastrar Evento</h1>
+                <label>Título <input type="text" name="titulo" required></label>
+                <label>Categoria 
+                    <select name="categoria">
+                        <option value="" hidden>Categoria</option>
+                        <option value="minicurso">Minicurso</option>
+                        <option value="opcional">Opcional</option>
+                    </select>
+                </label>
+                <label>Vagas <input type="number" name="vagas" min="1" max="30" required></label>
+                <button type="submit">Adicionar evento</button>
+            </form>
+            <p id="msg" class="msg"></p>
+        </section>
+        <section class="card">
+            <h2>Eventos Cadastrados</h2>
+            <div class="table-wrap">
+                <table id="tabela-eventos">
+                    <thead>
+                        <tr>
+                            <th>Eventos</th>
+                            <th>Categoria</th>
+                            <th>Vagas</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-eventos"></tbody>
+                </table>
+            </div>
+    </main>
+    <script src="/frontEnd/js/app.js"></script>
+</body>
+
+</html>
